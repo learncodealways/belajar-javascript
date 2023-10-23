@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator logika (javascript)</title>
+</head>
+<body>
+      <!-- Operator logika -->
+
+      <h1>Operator logika <span style="background-color:yellow ;">javascript</span></h1>
+
+      <table border="1" cellpadding="10" cellspacing="0">
+
+            <thead>
+                <tr>
+                    <th>Operator logika</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+                <tr>
+                    <td>&&</td>
+                    <td>And (dan)</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>Or (atau)</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>kebalikan</td>
+                </tr>
+
+                <tfoot>
+                    <tr>
+                        <th>Operator logika</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </tfoot>        
+      </table>
+      <hr>
+       <h1>Contoh penggunaan sederhana opera logika <span style="background-color: yellow;">(javascript)</span></h1>
+       <hr>
+
+       <script>
+            // operator && (and)
+            let nilaiUts = 70;
+            let nilaiUas = 70;
+
+               let lulusUts = nilaiUts > 75;
+                let lulusUas = nilaiUas > 75;
+                let hasil = lulusUts && lulusUas;
+                document.write(hasil);
+                document.write("</br>")
+
+                // operator || (or)
+ 
+                const uangBelanja = 400;
+                const shopping = 300;
+
+                const wallet = uangBelanja > 300;
+                const bayar = shopping > 500;
+                const total = wallet || shopping;
+                document.write(total);
+                document.write("</br>");
+                
+                // operator ! (kebalikan)
+
+                 let and = true && true;
+                 document.write(and);
+                document.write("</br>")
+                 const not = true && true;
+                 document.write(!not);
+                
+        </script>
+</body>
+</html>
