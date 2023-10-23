@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Perbandingan (javascript)</title>
+</head>
+<body>
+     <!-- 
+        Operator perbandingan adalah operasi untuk membandingkan dua data yang menghasilkan output nilai boolean true atau false
+      -->
+            <h1>Operator perbandingan <span style="background: yellow;">Javascript</span></h1>
+      <table border="1" cellspacing="0" cellpadding="10">
+         
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>></td>
+                    <td>Lebih besar dari</td>
+                </tr>
+                <tr>
+                    <td><</td>
+                    <td>Lebih kurang dari</td>
+                </tr>
+                <tr>
+                    <td>>=</td>
+                    <td>Lebih besar dari sama dengan</td>
+                </tr>
+                <tr>
+                    <td><=</td>
+                    <td>Lebih kurang dari sama dengan</td>
+                </tr>
+                <tr>
+                    <td>==</td>
+                    <td>Sama dengan</td>
+                </tr>
+                <tr>
+                    <td>===</td>
+                    <td>Sama dengan tipe data</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>Tidak sama dengan</td>
+                </tr>
+                <tr>
+                    <td>!==</td>
+                    <td>Tidak sama dengan tipe data</td>
+                </tr>
+            </tbody>
+      </table>
+                <hr>
+
+                <h1>Contoh penggunaan sederhana operator perbandingan javascript</h1>
+      <script>
+            // contoh penggunaan sederhana operator perbandingan
+
+            //   operator perbandingan lebih besar dari
+            let nilaiSatu = 30 > 20 ;
+             document.writeln("30 > 20 outputnya adalah" + " " + nilaiSatu);
+             document.writeln("<br>");
+
+            //  operator perbandigan lebih kurang dari
+            let nilaiDua = 20< 30;
+            document.writeln("20 < 30 outputnya adalah" + " " + nilaiDua);
+            document.writeln("<br>");
+
+            // operator perbandingan lebih besar dari sama dengan 
+            let nilaiTiga = 20 >= 20;
+            document.writeln("20 >= 20 outputnya adalah" + " " + nilaiTiga);
+            document.writeln("<br>");
+
+            // operator perbandingan lebih kurang dari sama dengan 
+            let nilaiEmpat = 20 <= 20;
+            document.writeln("20 <= 20 outputnya adalah" + " " + nilaiTiga);
+            document.writeln("<br>");
+
+            // operator perbandingan sama dengan 
+            let nilaiLima = 10 == 10;
+            document.writeln("10 == 10 outputnya adalah" + " " + nilaiLima);
+            document.writeln("<br>")
+
+            // operator perbandingan sama dengan tipe data
+            let nilaiEnam = "10" === "10";
+            document.writeln("\"10\" === \"10\" outputnya adalah" + " " + nilaiEnam);
+            document.writeln("<br>");
+
+            // operator perbandingan tidak sama dengan 
+            let nilaiTujuh = nilaiLima != nilaiEnam;
+            document.writeln("variabel nilaLima != nilaiEnam outputnya adalah" + " " + nilaiTujuh);
+            document.writeln("<br>");
+
+            // operator perbandigan tidak sama dengan tipe data
+            let nilaiDelapan = nilaiLima !== nilaiEnam;
+            document.writeln("variable nilaiLima !== nilaiEnam outputnya adalah" + " " + nilaiDelapan);
+            document.writeln("<br>");
+            
+      </script> 
+</body>
+</html> 
