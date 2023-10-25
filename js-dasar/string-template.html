@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String template (javascript)</title>
+</head>
+<body>
+    <!-- String template javascript yaitu menggunakan `` (backtick) -->
+
+   <table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>String template</th>
+            <th>Keterangan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>``</td>
+            <td>backtick</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>String template</td>
+            <td>Keterangan</td>
+        </tr>
+    </tfoot>
+   </table>
+        <br><br><br>
+   <script>
+
+
+
+            // cara memanggil variable ke dalam string biasa (petik satu (single quote) dan petik dua (duoble quote))
+
+            // cara penulisan lama dalam javascript (tidak disarankan karena repot dan juga tanda + itu merupakan seharusnya digunakan untuk operasi matematika disarankan menggunakan backtick(``))
+            document.writeln("<h4>1. cara penulisan lama dalam javascript (tidak disarankan karena repot dan juga tanda + itu merupakan seharusnya digunakan untuk operasi matematika)</h4>");
+            const namaLengkap = "Muhammad Ramadhan";
+            const namaPanggilan = "Rama";
+            const template1 = "Nama saya" + " " + namaLengkap + " " + "panggilan saya" + " " + namaPanggilan;
+            console.info(template1);
+            document.writeln(template1);
+            document.writeln("</br></br>");
+
+
+
+
+            // cara memanggil variable ke dalam penggunaan string template (backtick ``)
+
+            // cara penulisan baru dalam javascript disarankan menggunakan backtick
+        document.writeln("<h4>2. cara penulisan baru dalam javascript disarankan menggunakan backtick</h4>");
+        
+        const template = `Nama saya adalah  ${namaLengkap} panggilan saya ${namaPanggilan}`;
+        console.info(template);
+        document.writeln(template);
+        document.writeln("</br></br>");
+
+
+        // Penggunaan string template expression javascript
+        document.writeln("<h4>2. Penggunaan string template expression javascript </h4>");
+        const fullName  =  "Mardha Tillah";
+        const nilaiUas = 65;
+        const expressionTemplate = `Nama lengkap saya adalah ${fullName} dan saya lulus uas dengan nilai ${nilaiUas >= 65}`;
+        console.info(expressionTemplate);
+        document.writeln(expressionTemplate);
+        document.writeln("</br></br>");
+
+
+        // Penggunaan multiline string dengan backtik yang tidak bisa dilakukan oleh string biasa
+        document.writeln("<h4>2.Penggunaan multiline string dengan backtik dengan elemen pre html  yang tidak bisa dilakukan oleh string biasa </h4>");
+        let multiline = `<pre>Halo nama ku
+        adalah Muhammmad Ramadhan aku kali ini sedang belajar bahasa
+        pemrograman javascript
+        doakan aku ya teman-teman supaya jagooo</pre>`;
+
+        document.writeln(multiline);
+
+        let multiline2 = `<pre>Halo nama ku
+ adalah Muhammmad Ramadhan aku kali ini sedang belajar bahasa
+ pemrograman javascript
+ doakan aku ya teman-teman supaya jagooo</pre>`;
+
+        document.writeln(multiline2);
+
+
+
+   </script>
+</body>
+</html>
