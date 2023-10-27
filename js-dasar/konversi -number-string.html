@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi tipe data string dan number (javascript)</title>
+</head>
+<body>
+    <!-- function konversi tipe data pada javascript -->
+  <h1>function konversi tipe data pada javascript</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Function</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>parseInt()</td>
+                <td>Mengkonversi tipe data string to number (bilangan bulat)</td>
+            </tr>
+            <tr>
+                <td>parseFloat()</td>
+                <td>Mengkonversi tipe data string to number (bilangan pecahan)</td>
+            </tr>
+            <tr>
+                <td>Number()</td>
+                <td>Mengkonversi tipe data string to number (bilangan bulat atau pecahan)</td>
+            </tr>
+            <tr>
+                <td>number.toString()</td>
+                <td>Mengkonversi tipe data number to string</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Function</th>
+                <th>Keterangan</th>
+            </tr>
+
+        </tfoot>
+    </table>
+    <br><br><br>
+
+    <h1>contoh penggunaan function konversi tipe data javascript</h1>
+
+    <script>
+        let nilai1 = "1";
+        let nilai2 = 1;
+        let total = nilai1 + nilai2;
+        document.writeln(`<p>${total}</p>`);
+        console.info(total);
+        /* kira-kira apakah output yang dihasilkan dari kode program di atas
+          sebagian orang mungkin menanggap output yang dihasilkan adalah 2, jawabannya yang benar adalah 11.
+          kenapa?? karena const nilai1 bernilai "1"(string) jadi javascript menganggap bahwa hasil yang dingginkan adalah penggabungan (string) bukan penjumlahan. Lantas bagaimana mengatasi hal tersebut jika kita ingin mengahsilkan output penjumlahan walaupun nilai yang diinputkan bernilai tipe data string??
+          
+          Berikut di bawah ini adalah contohnya.
+
+        */
+
+        /*
+            parseInt()
+            "Mengkonversi tipe data string to number (bilangan bulat)"
+        */
+       nilai1 = parseInt("1");
+       nilai2 = 1;
+       total = nilai1 + nilai2;
+       document.writeln(`<p>${total}</p>`);
+       console.info(total);
+
+       
+        nilai1 = "1.1";
+        nilai2 = 1;
+        total = nilai1 + nilai2;
+        document.writeln(`<p>${total}</p>`);
+        console.info(total);
+       /* kira-kira apakah output yang dihasilkan dari kode program di atas
+          sebagian orang mungkin menanggap output yang dihasilkan adalah 2, jawabannya yang benar adalah 1.11
+          kenapa?? karena const nilai1 bernilai "1.1"(string) jadi javascript menganggap bahwa hasil yang dingginkan adalah penggabungan (string) bukan penjumlahan. Lantas bagaimana mengatasi hal tersebut jika kita ingin mengahsilkan output penjumlahan walaupun nilai yang diinputkan bernilai tipe data string??
+          
+          Berikut di bawah ini adalah contohnya.
+          */
+
+
+          /*
+                /*parseFloat()
+                "Mengkonversi tipe data string to number (bilangan pecahan)"
+
+                */ 
+
+      nilai1 = parseFloat("1.1");
+      nilai2 = 1;
+      total = nilai1 + nilai2;
+      document.writeln(`<p>${total}</p>`);
+      console.info(`${total}`);
+
+      /*
+      Number()
+
+      Mengkonversi tipe data string to number (bilangan bulat atau pecahan)
+      
+      */
+
+      nilai1 = "20";
+      nilai2 = 20;
+      total = nilai1 + nilai2;
+      document.writeln(`<p>${total}</p>`);
+      console.info(total);
+
+      nilai1 = Number("20");
+      nilai2 = 20;
+      total = nilai1 + nilai2;
+      document.writeln(`<p>${total}</p>`);
+      console.info(total);
+
+      nilai1 = Number("2.0");
+      nilai2 = Number("20");
+      total = nilai1 + nilai2;
+      document.writeln(`<p>${total}</p>`);
+      console.info(total);
+    //   dapat disimpulan bahwa konversi function Number() dapat bekerja secara fleksibel yaitu dapat menerima bilangan bulat ataupun pecahan dalam bentuk string yang nantinya akan dikonversi menjadi tipe data number.
+
+
+    /*
+        number.toString
+        "Mengkonversi tipe data number menjadi string "
+    */
+
+    nilai1 = 20;
+    nilai2 = 50;
+    total = nilai1.toString() + nilai2.toString();
+    document.writeln(`<p>${total}</p>`);
+    console.info(total);
+
+   
+        </script>
+
+
+</body>
+</html>
