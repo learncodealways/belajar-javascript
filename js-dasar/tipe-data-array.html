@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe data array javascript</title>
+</head>
+<body>
+    <!-- Tipe data array pada javascript -->
+    <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Operasi array</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>array.push()</td>
+                <td>Menambahkan value kedalam array</td>
+            </tr>
+            <tr>
+                <td>array.length()</td>
+                <td>Mengetahui panjang dari isi value array</td>
+            </tr>
+            <tr>
+                <td>array[index] = value</td>
+                <td>Mengubah isi value array</td>
+            </tr>
+            <tr>
+                <td>delete array[index]</td>
+                <td>Menghapus value yang terdapat pada array, tetapi index tidak bergeser atau yang lain tidak terpengaruh</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Operasi array</th>
+                <th>Keterangan</th>
+            </tr>
+        </tfoot>
+    </table><br><br><hr>
+
+    <script>
+           /*
+                Cara kerja array
+                -Array dihitung mulai dari index 0,
+                contoh :
+                value Rama = 0;
+                value Shinta = 1;
+                value Fajar = 2;
+                value Habibie = 3;
+
+                array dijavascript bersifat dinamis, artinya kita bisa memasukkan tipe data apapun ke dalam array.
+                contoh ;
+                let contohArray = ["Rama", true, 2, 2.1, false];
+                "Rama" = tipe data string;
+                true = tipe data boolean;
+                2 = tipe data number (bilangan bulat);
+                2.1 = tipe data number (bilangan pecahan);
+                false = tipe data boolean;
+
+                di dalam array kita bisa memasukkan data sebanyak apapun, bahkan kita bisa membuat multidimensi array
+                atau array dalam array;
+                contoh;
+                contohArray.push(["Shinta", false, 3, 3.1, true]);
+
+
+           */
+        // Cara membuat array
+
+        let contohArray = [];
+
+        // Penggunaan operasi array (array.push)
+        contohArray.push("Rama", "Shinta","Fajar", "Habibie");
+        document.writeln(contohArray[0]);
+        document.writeln(contohArray[1]);
+        document.writeln(contohArray[2]);
+        document.writeln(contohArray[3]);  
+        console.table(contohArray);
+        contohArray.push(["Mardha", 5, 2.2, false, true]);
+        console.table(contohArray);
+        document.write(contohArray[4][0]);
+
+        // Cara mengetahui panjang dari value di dalam array (array.length)
+
+        console.info(contohArray.length);
+
+        // Cara mengubah value di dalam array (array[index] = value)
+            contohArray[0] = "Muhammad Ramadhan";
+            contohArray[1] = "Shinta Noor Azzahra";
+            contohArray[2] = "Muhammad Fajar";
+            contohArray[3] = "Muhammad Habibie";
+            console.table(contohArray);
+            contohArray[4][0] = "Mardha Tillah";
+            console.table(contohArray);
+            console.table(contohArray[4]);
+
+            // Cara menghapus value yang terdapat pada array (delete array[index]);
+
+            delete contohArray[2];
+            console.table(contohArray);                 
+    </script>
+</body>
+</html>
