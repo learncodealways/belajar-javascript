@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if expression javascript</title>
+</head>
+<body>
+    <!-- if expression javascript -->
+
+    <!-- If expression adalah istilah yang digunakan dalam pemrograman untuk mengacu pada suatu ekspresi atau pernyataan yang mengandung kondisi atau percabangan. Ekspresi ini digunakan untuk menguji apakah suatu kondisi tertentu benar (true) atau salah (false), dan kemudian melakukan tindakan atau pernyataan tertentu berdasarkan hasil evaluasi kondisi tersebut.
+        Pada banyak bahasa pemrograman, if expression umumnya digunakan dalam bentuk berikut: -->
+
+        <!-- else if expression
+    Else if adalah pernyataan percabangan dalam bahasa pemrograman yang digunakan untuk membuat keputusan berdasarkan kondisi. Else if terdiri dari satu atau lebih kondisi yang diuji, dan setiap kondisi memiliki blok kode yang akan dieksekusi jika kondisi tersebut bernilai benar.
+
+    Analogi sederhana untuk else if adalah seperti sebuah lampu lalu lintas. Lampu lalu lintas memiliki tiga kondisi: merah, kuning, dan hijau. Kondisi merah berarti berhenti, kuning berarti bersiap-siap, dan hijau berarti jalan.
+
+    Dalam konteks pemrograman, else if digunakan untuk membuat keputusan berdasarkan kondisi. Jika kondisi pertama bernilai benar, maka blok kode yang mengikutinya akan dieksekusi. Jika kondisi pertama bernilai salah, maka kondisi kedua akan diuji. Jika kondisi kedua juga bernilai salah, maka kondisi ketiga akan diuji, dan seterusnya. -->
+
+        <!-- else expression (Pernyataan yang akan dijalankan jika kondisi salah (false)) -->
+    
+        <script>
+            let nilaiUAS = 90;
+             if (nilaiUAS > 80){
+                document.writeln("Grade nilai anda : A");
+             }else if(nilaiUAS > 70){
+                document.writeln("Grade nilai anda : B");
+             }else if (nilaiUAS > 60){
+                document.writeln("Grade nilai anda : C");
+             }else {
+                document.writeln("Grade nilai anda : E  ")
+             }
+
+             document.writeln("</br>");    
+
+              nilaiUAS = 80;
+             if (nilaiUAS > 80){
+                document.writeln("Grade nilai anda : A");
+             }else if(nilaiUAS > 70){
+                document.writeln("Grade nilai anda : B");
+             }else if (nilaiUAS > 60){
+                document.writeln("Grade nilai anda : C");
+             }else {
+                document.writeln("Grade nilai anda : E ")
+             }
+
+             document.writeln("</br>");
+
+              nilaiUAS = 70;
+             if (nilaiUAS > 80){
+                document.writeln("Grade nilai anda : A");
+             }else if(nilaiUAS > 70){
+                document.writeln("Grade nilai anda : B");
+             }else if (nilaiUAS > 60){
+                document.writeln("Grade nilai anda : C");
+             }else {
+                document.writeln("Grade nilai anda : E ")
+             }
+
+             document.writeln("</br>");
+
+             nilaiUAS = 60;
+             if (nilaiUAS > 80){
+                document.writeln("Grade nilai anda : A");
+             }else if(nilaiUAS > 70){
+                document.writeln("Grade nilai anda : B");
+             }else if (nilaiUAS > 60){
+                document.writeln("Grade nilai anda : C");
+             }else {
+                document.writeln("Grade nilai anda : E ")
+             }
+
+             document.writeln("<hr>");
+
+            //  latihan percabangan dengan studi kasus mengubah value object
+
+
+            document.writeln(`<h3>Data objek awal</h3>`);
+
+            let person = {
+                nama: "Rama",
+                alamat : "Banjarbaru",
+                umur : 19
+            };
+            document.writeln(`<p>nama : ${person.nama}</p>`);
+            document.writeln(`<p>alamat  : ${person.alamat}</p>`);
+            document.writeln(`<p>umur : ${person.umur}</p>`);
+            
+          
+            document.writeln("<hr>");
+
+           
+
+
+            document.writeln(`<h3>Data objek awal yang telah diubah dengan memanfaatkan if expressuon atau sering disebut juga percabangan</h3>`);
+
+            if(person.nama === "Rama" && person.alamat === "Banjarbaru" && person.umur === 19){
+                person["nama"] = "Muhammad Ramadhan";
+                document.writeln(`<p>nama lengkap saya : ${person.nama}</p>`);
+                person["alamat"] = "Banjarbaru Selatan";
+                document.writeln(`<p>alamat lengkap saya : ${person.alamat}</p>`);
+                person["umur"] = 21;
+                document.writeln(`<p> umur saya yang benar : ${person.umur}</p>`);
+            }else{
+                document.writeln("data tidak ada");
+            }
+
+            
+            
+                    
+
+
+
+
+
+
+
+
+
+
+        </script>
+</body>
+</html>
