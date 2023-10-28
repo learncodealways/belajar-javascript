@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe data object javascript</title>
+</head>
+<body>
+
+            <!-- Tipe data objek -->
+    <!-- Objek adalah tipe data kompleks yang memungkinkan kita menyimpan kumpulan nilai dengan tipe data yang berbeda. Objek berisi properti yang didefinisikan sebagai pasangan kunci dan nilai (key dan value). -->
+
+    <script>
+        // Cara menggunaakan object 
+
+        let person = {};
+
+        /*Dalam JavaScript, objek dapat dibuat dengan beberapa cara, yaitu:
+            .Literal
+            Objek literal adalah cara paling umum untuk membuat objek. Objek literal didefinisikan dengan tanda kurung kurawal, diikuti oleh daftar properti dan nilainya.
+    */
+
+
+    // .Literal
+
+    person = {
+        namaLengkap: "Muhammad Ramadhan",
+        alamatLengkap: "Banjarbaru Selatan, RW/RT 014/003",
+        umur: 21
+
+    };
+
+    // Cara memanggil object
+    document.writeln(`<p>nama lengakp : ${person.namaLengkap}</p>`);
+    console.table(person);
+
+    // Cara mengubah value dalam tipe data object
+    person["namaLengkap"]="Mardha Tillah";
+    document.writeln(`<p>nama lengkap : ${person.namaLengkap}</p>`);
+    console.table(person); 
+    
+    // Cara menghapus value dalam tipe data object
+    delete person["namaLengkap"];
+    console.table(person);
+    </script>
+</body>
+</html>
