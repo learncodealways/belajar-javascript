@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator typeof javascript</title>
+</head>
+<body>
+      <!-- operator typeof javascript
+    Operator typeof adalah salah satu operator dalam JavaScript yang digunakan untuk mengidentifikasi tipe data dari suatu nilai (variabel atau ekspresi). Operator ini mengembalikan sebuah string yang berisi informasi tentang tipe data dari nilai yang diberikan. -->
+
+     <h1>Operator typeof javascript</h1>
+      <table border="1" cellpadding="10" cellspacing="0">
+         <thead>
+            <tr>
+                <th>Type</th>
+                <th>Hasil Operator typeof</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+                <td>Undefined</td>
+                <td>"Undefined"</td>
+            </tr>
+            <tr>
+                <td>Null</td>
+                <td>"object"</td>
+            </tr>
+            <tr>
+                <td>Boolean</td>
+                <td>"boolean"</td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>"number"</td>
+            </tr>
+            <tr>
+                <td>BigInt</td>
+                <td>"bigInt"</td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td>"string"</td>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td>"symbol"</td>
+            </tr>
+            <tr>
+                <td>Function</td>
+                <td>"function"</td>
+            </tr>
+            <tr>
+                <td>Lainnya</td>
+                <td>"object"</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+                <th>Type</th>
+                <th>Hasil Operator typeof</th>
+            </tr>
+         </tfoot>
+      </table>
+       
+      <!-- contoh penggunaan operator typeof -->
+     
+      <script>
+      document.writeln(`<h2>Contoh Penggunaan sederhana operator typeof javascript</h2>`);
+    //  typeof String = "string"
+     let data = "halo";
+        let typeData = typeof data;
+        document.writeln(`<p>hasil typeof nya  ${data} adalah ${typeData}</p>`);
+        console.info(typeData);
+
+
+    // typeof Number = "number"
+        data = 100;
+        typeData = typeof data;
+        document.writeln(`<p>hasil typeof nya ${data} adalah ${typeData}</p>`);
+        console.info(typeData);
+
+        
+        data = true;
+        typeData = typeof data;
+        document.writeln(`<P> hasil typeof nya ${data} adalah ${typeData}</p>`);
+        console.info(typeData);
+      </script>
+</body>
+</html>
