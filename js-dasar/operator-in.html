@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>in operator Javascript</title>
+</head>
+<body>
+      <!-- 
+        In Operator
+         - In operator adalah operator yang bisa dilakukan untuk mengecek apakah sebuah property ada di dalam object atau tidak.
+         - Jika property tersebut ada di object, maka hasilnya true, sedangkan jika tidak maka hasilnya false
+         - Tidak hanya di object, In operator juga bisa digunakan untuk mengecek index di Array
+
+       -->
+</body>
+<!-- contoh penggunaan In operator -->
+<!-- syntax sederhana 
+   const person = {
+    fullName : "Muhammad Ramadhan"
+   }
+const result = "fullName" in person;
+document.writeln(`<p>${result}</p>`); -->
+<!-- outputnya true -->
+
+<!-- keterangan
+  untuk mengecek property dalam object atau index dalam array kita harus menggunakan ""(tanda petik) contohnya "fullName"
+-->
+ <script>
+    // Penggunaan In operator dalam tipe data object
+
+       const person = {
+        fullName : "Muhammad Ramadhan",
+        firstName : "Rama",
+        lastName : "Madan"
+       };
+    // cek property(object) dengan menggunakan In operator dalam sebuah kondisi
+    if ("fullName", "firstName", "lastName" in person){
+        document.writeln(`Hello ${person.fullName}, ${person.firstName}, ${person.lastName}<br>`);
+    }else{
+        document.writeln(`Hello nothing`);
+    }
+
+    // Penggunaan In operator dalam tipe data array
+
+    const student = [
+       "Rama",
+       "Aji",
+       "Faisal"
+
+    ];
+
+    // cek property(object) dengan menggunakan In operator dalam sebuah kondisi
+    if (0, 1 , 2 in student){
+        document.writeln(`Hello ${student[0]}, ${student[1]}, ${student[2]}<br>`)
+    }else{
+        document.writeln(`Hello nothing`)
+    }
+
+    /*
+        PERINGATAN
+    - In operator akan mengecek apakah sebuah property(object) atau index(array) ada atau tidak.
+    - Jadi walaupun property atau index nya bernilai atau memiliki value undefined atau null, maka akan dianggap ada (true)
+    */
+//    contoh penggunaan In operator property(object) yang memiliki value undefined  atua null
+
+const warn = {
+    personSatu : undefined,
+    personDua : null,
+    personTiga : "person"
+};
+// cek property(object) dengan menggunakan In operator dalam sebuah kondisi
+ if("personSatu", "personDua", "personTiga" in warn){
+    document.writeln(`hello object ${warn.personSatu}, hello object ${warn.personDua}, hello object ${warn.personTiga}<br>`);
+ }else{
+    document.writeln(`hello nothing <br>`);
+ }
+
+//  output diatas menghasilkan hello undefined dan hello null, karena In operator tidak memperdulikan value atau nilai dalam sebuah property(object) atau index(array), tetapi In operator hanya melihat apakah ada sebuah property(object) atau indexnya(array) saja.
+
+// contoh penggunaan In operator dalam index (array) yang memiliki value undefined  atua null
+
+const values = [
+    undefined,
+    null,
+    "Person"
+];
+// cek index (array) dengan menggunakan In operator dalam sebuah kondisi
+if (0, 1, 2 in values){
+    document.writeln(`hello array ${values [0]}, hello array ${values[1]}, hello array ${values[2]}`)
+}else{
+    document.writeln(`nothing`)
+}
+ </script>
+</html>
