@@ -31,6 +31,14 @@
                 <td>delete array[index]</td>
                 <td>Menghapus value yang terdapat pada array, tetapi index tidak bergeser atau yang lain tidak terpengaruh</td>
             </tr>
+            <tr>
+                <td>array.shift()</td>
+                <td>Menghapus value yang terdapat pada array pada urutan paling pertama(index ke 0)</td>
+            </tr>
+            <tr>
+                <td>array.pop()</td>
+                <td>Menghapus value yang terdapat pada array pada urutan paling akhir</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
@@ -98,7 +106,23 @@
             // Cara menghapus value yang terdapat pada array (delete array[index]);
 
             delete contohArray[2];
-            console.table(contohArray);                 
+            console.table(contohArray); 
+            
+            
+            const mataKuliah = [
+                "Pemrograman web",
+                "Pemrograma desktop",
+                "Internet of things"
+            ]
+            console.table(mataKuliah);
+            
+            // contoh menghapus value pada array mataKuliah pada index paling pertama (index 0) array.shift()
+            mataKuliah.shift();
+            console.table(mataKuliah);
+
+            // contoh menghapus value pada array matakKuliah pada index paling terakhir array.pop()
+            mataKuliah.pop();
+            console.table(mataKuliah);
     </script>
 </body>
 </html>
