@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary operator javascript</title>
+</head>
+<body>
+    <!-- 
+        Ternary Operator
+        - Ternary operator adalah operator sederhana dari if statement.
+        - Ternary operator terdiri dari kondisi yang dievaluasi jila menghasilkan true maka nilai pertama diambil, jika false maka nilai kedua diambil
+        - Kelebihan ternary operator adalah kita bisa menggunakan variable const (konstan) tidak dapat dirubah
+        - Kekurangannya ternary operator adalah hanya bisa melakukan 2 kondisi saja yaitu if dan else
+
+        rules (aturan penulisan ternary operator)
+        1. deklarasi variable kondisi
+        2. deklarasi variable ternary operator
+        3. kondisi
+        4. statement true ditandai dengan tanda tanya(?)
+        5. statement false ditandai dengan titik dua(:)
+       
+        contoh penulisannya:
+
+        const nilai = 70
+      const seleksi = nilai >= 70 ? "Selamat anda lulus seleksi" : "Mohon maaf anda tidak lulus"
+
+      tinggal kita panggil saja variabel nilai
+      document.writeln(`${nilai}`)
+      hasil outputnya ("Selamat anda lulus seleksi")
+
+      keterangan variable diatas:
+      - variable nilai adalah variable kondisi
+      - variable seleksi adalah variable ternary operator
+
+     -->
+
+   <script>
+   // contoh pengkondisian menggunakan if else
+   let nilai = 70
+   let seleksi
+
+   if(nilai >= 70){
+    seleksi = "Selamat anda lulus seleksi"
+    document.writeln(`${seleksi}<br>`)
+   }else{
+    seleksi = "Mohon maaf anda tidak lulus seleksi"
+    document.writeln(`${seleksi}<br>`)
+   }
+
+   //contoh pengkondisian menggunakan ternary operator
+
+   nilai = 70
+   const seleksiSelanjutnya = nilai >= 70 ? "Selamat anda lulus seleksi" : "Mohon maaf anda tidak lulus seleksi"
+
+//    panggil variable seleksiSelanjutnya yang telah di iniliasisasi dengan ternary operator
+document.writeln(`${seleksiSelanjutnya}`)
+ 
+
+   
+   </script>
+  
+</body>
+</html>
