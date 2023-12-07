@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalescing Operator Javascript</title>
+</head>
+<body>
+    <!-- 
+
+        Nullish Coalescing Operator
+        
+        - Nullish coalescing operator atau sering disebut dengan Nullish value adalah operator pengkondisian true apabila  memiliki  value null dan atau undefined 
+        - Nullish coalescing operator (??) adalah operator yang mirip dengan ternary operator, yang membedakan adalag pada kondisi, jika bernilai null atau undefined maka true atau kondisi dieksekusi
+
+    
+     -->
+<script>
+//   contoh mengecek atau mengganti statement  nilai null atau undefined tanpa nullish coalescing operator (menggunakan kondisi if else)
+
+let parameter 
+ let statement = parameter
+ if(statement === null || statement === undefined){
+    statement = ("Helo nilai default")
+ }else{
+    statement =(`Helo ${statement}`)
+ }
+ alert(`${statement}`)
+
+//  algoritma diatas adalah :
+/*
+ jika (if) variable statement yang berisi value variable parameter bernilai sama dengan tipe data null atau sama dengan tipe data undefined maka (then) jalankan kondisi atau keluarkan output yang berisi statement = ("Helo nilai default") jika tidak atau salah (else) maka (then) jalankan kondisi atau keluarkan output yang berisi statement = (`Helo ${statement}`)
+
+ Hasil :
+ alert(`${statement}`) == statement = ("Helo nilai default")
+*/
+</script>
+</body>
+</html>
