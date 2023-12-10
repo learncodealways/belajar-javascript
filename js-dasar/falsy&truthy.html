@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 
+        Falsy
+        - Falsy atau kadang ditulis falsey, adalah value yang ketika dalam konteks boolean, dia dianggap false
+        - Ini adalah salah satu fitur unik dari Javascript, yang berguna, namun kadang juga sering membingungkan
+        - Jadi di Javascript, kondisi itu tidak hanya bisa boolean, tapi dilaur boolean pun bisa, namun kita harus tahu beberapa data falsy atau dianggap false
+      -->
+
+      <!-- 
+        Truthy
+        - Truthy adalah kebalikan dari falsy, dimana datanya dianggap bernilai true
+        - Sederhana sekali sebeanarnya untuk mengetahui sebuah data itu adalah truthy, yaitu data yang bukan berniali falsy
+       -->
+
+      <table border="1" cellpadding="10" cellspacing="0">
+
+        <thead>
+            <tr>
+                <th>Data dianggap Falsy(false)</th>
+                <th>keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>false</td>
+                <td>Boolean false</td>
+            </tr>
+            <tr>
+                <td>0, -0</td>
+                <td>Number 0 dan -0 dianggap false, selain dari kedua numbeer tersebut dianggap true</td>
+            </tr>
+            <tr>
+                <td>"", '', ``</td>
+                <td>semua string kosong dianggap false</td>
+            </tr>
+            <tr>
+                <td>null</td>
+                <td>null dianggap false</td>
+               
+            </tr>
+            <tr>
+                <td>undefined</td>
+                <td>undefined dianggap false</td>
+            </tr>
+            <tr>
+                <td>NaN</td>
+                <td>NaN (Not a Number) dianggap false</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Data dianggap Falsy(false)</th>
+                <th>keterangan</th>
+            </tr>
+        </tfoot>
+      </table>
+  <br><br>
+<script>
+    // contoh penggunaan falsy dan truthy
+    
+    // falsy
+
+    let result = "";
+    
+    if (result){
+       document.writeln(`hasil output string kosong adalah (true) <br>`);
+    }else{
+        document.writeln(`hasil output string kosong adalah (false) <br>`)
+    }
+
+    // truthy
+
+    result = "false";
+    
+    if (result){
+        document.writeln(`hasil output penulisan "false" adalah (true)`);
+    }else{
+        document.writeln(`hasil output penulisan "false" adalah (false)`)
+    }
+    /* false kok dianggap true? kenapa?
+
+       karena false ditulis dalam metode string, string dianggap true apabila string tersebut tidak kosong, begitu juga seperti (NaN, null, undefined, dll) apabila ditulis dalam metode atau tipe data string
+    */
+</script>
+</body>
+</html>
