@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop Javascript</title>
+</head>
+<body>
+    <script>
+        /*
+        Do While Loop
+        - Do while loop adalah perulangan yang mirip dengan while
+        - Perbedaannya hanya pada pengecekan kondisi
+        - Pengecekan kondisi di while loop dilakukan di awal sebelum perulangan dilakukan, sedangkan di do while loop dilakukan setelah perulangan dilakukan
+        - Oleh karena itu dalam do while loop, minimal pasti sekali perulangan dilakukan walaupun kondisi tidak bernilai true (false)
+
+        SINTAK DO WHILE LOOP
+        do {
+            // block statement
+            kondisi++
+        }while(kondisi)
+        
+        */
+
+        // contoh penggunaan do while loop
+        let love = 100;
+        do{
+            document.writeln(`<p>Love Mardha ke - ${love}</p>`);
+            love++
+        }while(love <=10)
+        /*Pengecekan kondisi do while loop dilakukan setelah perulangan dilakukan
+        - Oleh karena itu dalam do while loop, minimal pasti sekali perulangan dilakukan walaupun kondisi tidak bernilai true (false) */
+    </script>
+</body>
+</html>
