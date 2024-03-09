@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of</title>
+</head>
+<body>
+    <!-- For Of 
+    
+    - Jika For In digunakan untuk melakukan iterasi property atau index, berbeda dengan For Of, ini digunakan untuk melakukan iterasi terhadap isi value dari iterable object, seperti array, string dan lain-lain.
+
+    - For of tidak bisa digunaakan untuk melakukan iteraasi data object, karena onject bukannlah iterable
+    -->
+
+    <script>
+        const personality = [
+            "Muhammad Ramadhan",
+            "Sistem Informasi",
+            "Fullstack Developer Expert"
+        ]
+
+        for(const person of personality ){
+            document.writeln(`${person} <br>`)
+        }
+
+        document.writeln(`<hr>`)
+        const nama = "Muhammad Ramadhan"
+
+        for(name of nama){
+            document.writeln(`${name} <br>`)
+        }
+    </script>
+</body>
+</html>
