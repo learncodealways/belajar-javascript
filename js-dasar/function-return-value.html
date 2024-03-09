@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Return Value</title>
+</head>
+<body>
+    <!-- Function Return Value
+    
+        - Secara default function tidak menghasilkan value apapun, namun jika kita ingin, kita bisa membuat sebuah function mengembalikan value.
+        
+        - Agar function bisa menghasilkan value, kita bisa menggunakan kata kunc return di dalam function nya.
+
+        - Dan di dalam block function, untuk menghasilkan nilai tersebut, kita harus menggunakan kata kunci return, lalu diikuti dengan data yang ingin kita hasilkan.
+
+        - Function hanya bisa mengembalikan satu data, jika kita ingin mengembalikan beberapa data sekaligus, kita bisa menggunakan Array sebagai return value nya.
+    -->
+
+
+    <script>
+// hanya mengembalikan satu nilai
+        function nilaiUn (nilaiUn){
+            if (nilaiUn > 90){
+                return `nilai anda A <br>`
+            }else if(nilaiUn > 80){
+                return `nilai anda B <br>`
+            }else if(nilaiUn > 70){
+                return `nilai anda C <br>`
+            }else if(nilaiUn > 60){
+                return `nilai anda D <br>`
+            }else{
+                return `nilai anda E <br>` 
+            }      
+            
+        }
+        let nilaiAnda = 90
+        document.writeln(nilaiUn(nilaiAnda))
+    //    mengembalikan biasa
+       
+       
+       
+        document.writeln(`<hr>`)
+       
+   
+   
+   
+        //    mengembalikan banyak nilai dengan array
+        function UAS (nilai){
+       
+            if (nilai > 90){
+                return `nilai anda A <br>`
+            }else if(nilai > 80){
+                return `nilai anda B <br>`
+            }else if(nilai > 70){
+                return `nilai anda C <br>`
+            }else if(nilai > 60){
+                return `nilai anda D <br>`
+            }else{
+                return `nilai anda E <br>` 
+            }      
+            
+        }
+
+       const nilai = [100,90,80,70,60]
+
+       for (const nilaiakhir of nilai ) {
+        document.writeln(UAS(nilaiakhir))
+       }
+
+    //    mengembalikan sebuah array
+      
+    </script>
+</body>
+</html>
