@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter Function</title>
+</head>
+<body>
+    <!-- Default Parameter 
+     - Sekarang kita tahu bahwa parameter itu optional, artinya kita bisa tidak memberi value terhadap parameter
+
+     - Parameter juga bisa kita beri default value, artinya jika ketika kita tidak mengirim data ke parameter atau kita mengirim data undefined, maka secara otomatis parameter akan diisi oleh default value
+    -->
+
+    <script>
+        function register(nama, gender="unknown" ){
+            const say = `helo ${nama} ${gender}`
+               
+            return say
+        }
+
+        document.writeln(register("Rama"))
+        // argument yang dimasukkan cuma di isi satu, maka default parameter yang sudah dibuat akan dikirimkan
+        document.writeln("<br>")
+        document.writeln(register("Rama", "male"))
+        // argument yang dimasukkan dua, maka string male akan menimpan default parameter gender yaitu unknown
+    </script>
+</body>
+</html>
