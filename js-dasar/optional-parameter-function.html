@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Parameter</title>
+</head>
+<body>
+    <!-- Optional Parameter
+    
+        - Secara default, parameter di function itu opnional,
+
+        - Artinya kita tidak wajib mengisi value nya ketika memanggil function
+
+        - Jika tidak ada value yang kita kirim ke parameter ketika memanggil function, maka secara otomatis parameter tersebut bernilai undefined dan jika mengisikan value tanpa ada parameter maka akan diabaikan valuenya
+    -->
+
+
+    <script>
+        function optionalParameter(namaDepan, namaBelakang){
+          
+            const say = `hello ${namaDepan} ${namaBelakang}`
+
+            return say
+        }
+
+       
+       
+        document.writeln(optionalParameter("Muhammad"))
+        // hello Muhammad undefined
+            document.writeln("<br>")
+       
+       
+            document.writeln(optionalParameter("Muhammad", "Ramadhan", "Mardha"))
+            // hello Muhammad Ramadhan
+            // Mardha diabaikan, karena parameter difunction hanya ada dua saja yaitu namaDepan dan namaBelakang
+    </script>
+</body>
+</html>
