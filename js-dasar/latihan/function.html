@@ -1,0 +1,41 @@
+
+
+<script>
+   
+// mencari jumlah dua kubus tanpa function
+let a = 8;
+let b = 3;
+
+let volumeA = a**3;
+let volumeB = b**3;
+let total = volumeA + volumeB;
+alert(total);
+
+
+
+//  mencari jumlah  dua kubus dengan function
+ function jumlahDuaVolumeKubus(a, b){
+    return a **3 + b **3;
+ }
+
+ document.writeln(` ${jumlahDuaVolumeKubus(8, 3)} `);
+
+
+
+
+// function dengan array arguments (pengganti isi parameter)
+function tambah (){
+ 
+ let hasil = 0
+    for (let i = 0; i < arguments.length; i++){
+        hasil += arguments[i];
+    }
+
+
+    return hasil;
+}
+
+ let jumlah = tambah(5,5);
+
+console.info(jumlah);
+</script>

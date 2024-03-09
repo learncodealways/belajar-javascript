@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+        // Membuat dan memanggil array
+        let anggotaMahasiswa = ["Mardha Tillah"];
+        console.table(anggotaMahasiswa);
+
+
+
+        // Metode dalam array
+        // 1. Menambahkan elemen array ke paling akhir.
+        anggotaMahasiswa.push("Clara Bernadeth");
+        console.log(anggotaMahasiswa);
+
+        // 2. Menghapus elemen array ke paling akhir.
+        anggotaMahasiswa.pop();
+        console.log(anggotaMahasiswa);
+
+        // 3. Menambahakan elemen array ke paling awal.
+        anggotaMahasiswa.unshift("Muhammad Ramadhan");
+        console.log(anggotaMahasiswa);
+
+        // 4. Menghapus elemen array ke paling awal
+        anggotaMahasiswa.shift();
+        console.log(anggotaMahasiswa);
+
+       
+       
+        anggotaMahasiswa.unshift("Muhammad Ramadhan");
+        console.log(anggotaMahasiswa);
+
+         // 5. Memanggil array atau menambah sebuah elemen atau pengganti elemen pada array
+        console.log(anggotaMahasiswa.join(" - "));
+ 
+        // 6. Menyambung array cara penulisan (indexnya mau yang mana, elemen yang mau dihapus setelahnya (opsional), elemen baru)
+        anggotaMahasiswa.splice(0, 2  , "Haha");
+        console.log(anggotaMahasiswa.join(" - "));
+
+        anggotaMahasiswa.push("hihi", "huhu", "tai", "kontol");
+        console.log(anggotaMahasiswa.join(" - "))
+        
+
+        // 7. Mengiris array (harus dibuat dalam variabel baru karena slice sifatnya membuat array baru)
+        let anggotaMahasiswa2 = anggotaMahasiswa.slice(1,3);
+        console.info(anggotaMahasiswa2.join(" - "))
+
+        // 8. foreach
+            let angka = [2,1,3,5,4.5,10];
+
+            let isi = function (elemen){}
+            angka.forEach(isi);
+             console.info(angka.join("-"));
+      
+      
+             // 9. Map
+
+             angka.map(function(elemenMap){
+                console.info(elemenMap * 2);
+             })
+
+            //  10. sort
+
+            angka.sort(function(a,b){
+                return a-b;
+            })
+
+            // 11. filter (mencari banyak nilai)
+            let angka2 = angka.filter(function (arrayParameter){
+                return arrayParameter > 1;
+            })
+            console.info(`ini adalah array penggunaan filter  dengan nomor lebih dari angka satu ${angka2.join(" 😎 ")}`);
+           
+              
+            // 12. find (mencari satu nilai sifatnya tidak bisa mengembalikan dengan array or dengan tanpa penggunaan join)
+
+            angka2 = angka.find(function (find){
+                return find == 10;
+            }) 
+
+            console.info(`ini adalah penggunaan find dengan nomor ${angka2}`);
+            
+
+
+ 
+ 
+// Memanggil array dengan pengulangan while
+ let a = 0;
+ while ( a < anggotaMahasiswa.length){
+    console.log(`ini adalah mahasiswa ke ${a+1} ${anggotaMahasiswa[a]}`)
+a++;
+ }
+      </script> 
+</body>
+</html>
