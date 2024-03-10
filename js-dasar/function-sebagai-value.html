@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function value</title>
+</head>
+<body>
+    
+<!-- 
+    Function Value
+
+    - Function tidak hanya bisa digunakan sebagai kode program yang dieksekusi, tapi bisa juga sebagai value
+
+    - Artinya, function bisa disimpan di variable, bisa juga dikirim melalui parameter ke function lainnya
+ -->
+
+
+    <script>
+        // Mendefinisikan sebuah fungsi bernama hi
+        function hi(name){
+            document.writeln(`Hello ${name}<br>`)
+        }
+
+
+        let say = hi
+
+        // Memanggil fungsi hi dari variable say
+        say("Rama")
+  
+
+       
+
+// Membuat sebuah fungsi bernama call
+       function call(callback){
+          callback("eko")
+       }
+
+        // Menggunakan fungsi sebagai argumen dalam fungsi lain
+     call(say)
+
+    
+    
+    
+    
+    
+    
+     // Mendefinisikan sebuah fungsi bernama add
+    function add (a, b){
+      
+    
+        const say = `hello ${a} ${b}` .toUpperCase()
+        return say
+    }
+
+    let sum = add
+    // Memanggil fungsi add dari variable sum
+    document.writeln(sum("haha", "hihi"))
+    
+    
+    document.writeln(`<br>`)
+
+   
+   
+   
+   
+   
+    // Menggunakan fungsi sebagai argumen dalam fungsi lain
+
+    function operation(a,b, func){
+       return func(a,b)
+    }
+
+    document.writeln(operation("Rama","Mardha" ,add))
+
+
+
+
+    
+    </script>
+</body>
+</html>
