@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Anonymous Function
+    
+        - Sebelumnya kita selalu membuat function dengan nama
+
+        - Kita juga bisa membuat function tanpa nama function, atau istilahnya adalah anonymous function
+
+        - Kita bisa buat anonymous function dalam sebuah variable atau bisa juga kita buat ketika mengisi parameter
+    
+    -->
+
+
+
+    <script>
+        // Membuat anonymous function
+        let me = function(name){
+            return `halo ${name}`
+        }
+
+        document.writeln(me(`mardha`))
+
+            document.write(`<br>`)
+ 
+
+        
+        function give(callback){
+                callback(`Rama`)
+        }
+       
+    //    anonymous function sebagai argument
+        give(function(name){
+            document.writeln(`hi ${name}`)
+        })
+
+       
+
+      
+
+
+    </script>
+</body>
+</html>
