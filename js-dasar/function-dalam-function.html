@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function dalam function</title>
+</head>
+<body>
+    <!-- Function dalam Function
+    
+    - Tidak ada batasan dimana kita bisa membuat function
+
+    - Termasuk jika kita ingin membuat function di dalam sebuah function, kita bisa melakukannya 
+
+    - Function yang terdapat di dalam function disebut juga dengan inner function
+
+    - Inner function hanya bisa diakses di tempat kita membuat function nya, tidak bisa diakses dari luar functionnya
+    -->
+
+
+    <script>
+
+        let me = function(name){
+            function forMe(callback){
+              callback(`Rama love Allah`)  
+             }
+             forMe(function(name){
+                    document.writeln(`hi ${name}`)
+                })}
+        me()
+    </script>
+</body>
+</html>
