@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    
+        <!-- Scope
+        
+            - Scope merupakan area akses sebuah data
+            
+            - Ada dua jenis scope, global scope dan local scope
+
+            - Setiap kita membuat function, maka kita akan membuat local scope untuk function tersebut.
+
+            - Data di global scope bisa diakses di local scope
+
+            - Tapi data di local scope hanya bisa di akses scope tersebut
+
+            - Local scope bisa diakses diluar apabila dia adalah nested function atau inner function
+        -->
+
+    <script>
+       
+    //    global scope 
+         let myName = "Muhammad Ramadhan"
+
+       
+         function sayName(){
+           
+        //    local scope
+            let meName = "Rama"
+
+            document.writeln(`<p>Hello ${myName}</p>`)  // we can access, because myname variable is a global scope variable 
+         }
+       sayName()
+
+       //document.writeln(`${meName}`) // we can't access, because not defined variable meName,where meName is a local scope variable
+       
+
+    //    nested function
+
+           
+       function i(){
+          //Local scope variable
+        let firstName = "I"
+       
+        // let middleName = "Love"
+        // document.writeln(middleName) //we can't access
+            function love(){
+            //    Local scope variable
+                let middleName = "Love"
+                document.writeln(firstName) // we can access
+                
+                // let lastName = "You"
+                // document.writeln(lastName)// we can't acces
+              
+                function you(){
+                     document.writeln(middleName) //we can access
+                     let lastName = "You"
+
+                    function forever(){
+                        document.writeln(lastName) //we can access
+                        document.writeln(`Forever`)
+                    }
+                    forever()
+                }
+                you()
+             } 
+           love()
+        }
+
+        i()
+        
+    
+        // Kita bisa menggunakan local scope variabel di nested function, tetapi local scope hanya bisa dipangil dari atas ke bawah, tidak bisa dipanggil dari bawah ke atas
+
+        
+    </script>
+</body>
+</html>
