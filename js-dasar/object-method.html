@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</titl></title>
+</head>
+<body>
+
+    <script>
+
+        // Object Method
+        /*
+         - Pada tipe data object, kita sudah membahas tentang property di object
+         - Karena sebenarnya function juga merupakan salah satu tipe data, jadi function pun sebenarnya bisa ditambahkan sebagai property di object
+         - Cara pembuatannta pun sama dengan function sebagai value
+         - Function di object kadang disebut juga sebagai Object Method
+
+        */
+
+        // Kode : Membuat Object Method 
+        let Person = {
+            sayHello : function myName (name){
+                alert(`Hello my name is ${name}`);
+            }
+        }
+
+        Person.sayHello('Rama')
+
+
+        // Kode : Menambah Method Ke Object
+
+        let Mahasiswa = {
+            name : function name (name){
+                alert(`My Name is ${name}`);
+            }
+        }
+
+
+
+        // OBJECT METHOD NIM DITAMBAHKAN KE DALAM OBJECT Mahasiswa
+        Mahasiswa.NIM = function NIM (NIM){
+            alert(`NIM is ${NIM}`);
+        }
+
+        Mahasiswa.NIM(310121012722);
+        
+    </script>
+    
+</body>
+</html>
