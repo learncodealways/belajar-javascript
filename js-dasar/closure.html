@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+        // Closure
+        /*
+         - Closure adalah kombinasi function dan bundel refrensi ke data disekitarnya
+         - Kita suda tahu bahwa local scope tidak bisa diakses di liuar scopenya
+         - Dengan kemampuan closure, kita bisa membuat sebuah function di local scope dan refrensi ke data di sekitar local scope tersebur, kelaur scopenya
+
+        */
+
+
+        // Kode : Closure
+
+        function createAdd(value){
+            const author = 'Rama';
+
+            function add(param){
+                document.writeln(author);
+                return value + param;
+            }
+            return add;
+        }
+
+        const result = createAdd(2);
+        document.writeln(result(10));
+
+        //createrAdd menampung parameter value
+        // result menampung parameter param
+    </script>
+</body>
+</html>
