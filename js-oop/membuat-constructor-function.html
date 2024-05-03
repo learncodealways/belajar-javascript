@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Constructor Function JS</title>
+</head>
+<body>
+       <h1>Membuat Object</h1>
+       <ul>
+        <li>Sebenarnya kita sudah belajar tipe data object, dengan cara membuat variable dengan tipe data object</li>
+
+        <li>Namun pembuatan object menggunakan tipe data object, akan membuat object selalu unik, sedangkan dalam OOP, biasanya kita akan membuat class sebagai cetakan, sehingga bisa membuat object dengan karaktersitik yang sama berkali-kali, tanpa harus mendeklarasikan object berkali-kali seperti menggunakan tipe data objet</li>
+       </ul>
+
+       <h2>Kode : Membuat Object dengan Object</h2>
+       <pre>
+        const rama = {
+            firstName : "Muhammad",
+            lastName : "Ramadhan"
+        }
+
+        const budi = {
+            firstName : "Budi",
+            lastName : "Nugraha"
+        }
+       </pre>
+
+       <h1>Membuat Constructor Function</h1>
+       <ul>
+        <li>Sebelum EcmaScript versi 6, pembuatan class, biasanya menggunakan function. Ha ini dikarenakan sebenarnya JavaScript bukanlah bahasa pemrograman yang fokus ke OOP</li>
+
+        <li>Untuk membuat class di JavaScript lama, kita bisa membuat function</li>
+
+        <li>Function ini disebut dengan Constructor Function</li>
+       </ul>
+
+       <h2>Kode : Constructor Function</h2>
+       <pre>
+        function Person(){
+
+        }
+       </pre>
+
+       <h1>Membuat Object dari Constructor Function</h1>
+       <ul>
+        <li>Setelah kita membuat class, jika kita ingin membuat object dari class tersebut, kita bisa menggunakan kata kunci new, lalu diikuti dengan nama constructor functionnya.</li>
+       </ul>
+
+       <h2>Kode : Membuat Object</h2>
+       <pre>
+        function Person(){
+
+        }
+
+        const rama = new Person();
+        const budi = new Person();
+       </pre>
+
+    <script>
+        function Person(){
+
+        }
+
+
+        const rama = new Person();
+        const budi = new Person();
+    </script>
+</body>
+</html>
