@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+    <h1>Prototype Inheritance</h1>
+    <ul>
+        <li>Sekarang kita sudah tahu, nahwa Prototype selalu memiliki parent, artinya dia adalah turunan, parent tertinggi adalah Object.prototype</li>
+
+        <li>
+            Pertanyaannya bagaimana jika kita ingin melakukan inheritance ke prototype lain?
+        </li>
+
+        <li>Hal ini juga bisa dilakukan, namun agak sedikit tricky, karena hal ini, sebenarnya untuk JavaScript modern, tidak direkomendasikam lagi praktek OOP menggunakan Prototype, karena di ES6 sudah dikenalkan kata kunci class yang akan nanti dibahas di chapter tersendiri</li>
+    </ul>
+
+    <script>
+        function Manager (name){
+            this.name = name
+            // this.say = function(){
+            //     console.info(`hello ${this.name}`)
+            // }
+        }
+
+        function Hrd (name){
+            this.name = name
+        }
+
+       
+        Hrd.prototype = Object.create(Manager.prototype)
+
+        Hrd.prototype.say = function(name){
+            console.info(`Hallo ${name} is a Hrd my name is ${this.name}`)
+        }
+
+        Manager.prototype = Object.create(Hrd.prototype)
+        Manager.prototype.say = function(name){
+            console.info(`Hallo ${name} is a Manager my name is ${this.name} `)
+        }
+
+        const hrd = new Hrd(`Rama`)
+        hrd.say(`Joko`)
+
+        const manager = new Manager(`Rama`)
+        manager.say(`Panji`)
+
+        console.info(hrd)
+        console.info(manager)
+
+
+        
+    </script>
+</body>
+</html>
