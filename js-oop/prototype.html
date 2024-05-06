@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <h1>Prototype</h1>
+    <ul>
+        <li>Javascript sebelumnya dikenal dengan pemrograman berbasis prototype</li>
+
+        <li>Memang agak sedikit membingungkan dan tidak dipungkiri, banyak sekali yang bingung dengan konsep prototype di Javascript</li>
+    </ul>
+
+    <h1>Prototype Inheritance</h1>
+    <ul>
+        <li>Saat kita membuat object dari constructor function, object tersebut disebut instance, semua property (baik itu value dan method), akan berada di dalam instance objectnya</li>
+
+        <li>Setiap kita membuat sebuah constructor function, maka secara otomatis akan dibuatkan prototypenya, misal ketika kita membuat constructor function Person, maka akan ada Person.prototype</li>
+
+        <li>Saat kita membuat sebuah object instance, secara otomatis object tersebut adalah turunandari Constructor.prototype nya </li>
+
+        <li>Untuk mengakses prototype milik sebuah instance, kita bisa menggunakan __proto__</li>
+    </ul>
+
+    <h1>Menambah Property ke Prototype</h1>
+    <ul>
+        <li>Property mirip object, dimana kita bisa menambah property baik itu value ataupun method</li>
+
+        <li>Saat kita menambah sebuah property ke Prototype, secara otomatis, semua object instance yang turunan dari prototypw tersebut akan memiliki property tersebut</li>
+    </ul>
+
+    <h1>Cara Kerja Prototype Inheritance</h1>
+
+    <ul>
+        <li>Bagaimana bisa property di prototype diakses dari object instance?</li>
+
+        <li>Ketika kita mengakses property di object instance, pertama akan dicek apakah diobject tersebut terdapa property tersebut atau tidak, jika tidak, maka akan dicek di __proto__(prototype)nya, jika masih tidak ada, akan dicek lagi di __proto__(prototype) yang lebih tinggi, begitu seterusnya, sampai berakhir di object Prototype</li>
+    </ul>
+
+    <h2>Kode : Contoh Prototype</h2>
+    <pre>
+        function Person (firstName, lastName){
+            this.firstName = firstName
+            this.lastName = lastName
+        }
+
+        Person.prototype.sayHello = function (){
+            console.info(`Hallo`)
+        }
+
+        Person.prototype.run = function (){
+            console.info(`${this.firstName}${this.lastName is running}`)
+        }
+
+        // Secara otomatis prototype kedua diatas akan terdapat di instance object rama dan budi
+
+        const rama = new Person(`Muhammad`, `Ramadhan`)
+
+        const budi = new Person (`Budi`, `Nugraha`)
+
+         console.info(rama)
+         console.info(budi)
+
+         rama.sayHello()
+         rama.run()
+
+         budi.sayHello()
+         budi.run()
+    </pre>
+
+    <script>
+        function Person(firstName, lastName){
+            this.firstName = firstName
+            this.lastName = lastName
+            // this.sayHello = function (){
+            //     console.info(`Hello ${this.lastName}`)
+            // }
+        }
+
+    
+        Person.prototype.sayHello = function (){
+            console.info(`Hallo ${this.firstName}`)
+        }
+
+        Person.prototype.run = function (){
+            console.info(`${this.firstName} ${this.lastName} is running`)
+        }
+
+        const rama = new Person(`Muhammad`, `Ramadhan`)
+        // rama.sayHello = function (){
+        //     console.info(`haha ${this.firstName}`)
+        // }
+
+        const budi = new Person(`Budi`, `Nugraha`)
+        // budi.sayHello = function(){
+        //     console.info(`haha ${this.firstName}`)
+        // }
+        console.info(rama)
+        console.info(budi)
+
+        rama.sayHello()
+        rama.run()
+
+        budi.sayHello()
+        budi.run()
+    </script>
+</body>
+</html>
