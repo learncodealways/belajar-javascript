@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method di Class</title>
+</head>
+<body>
+    <h1>
+        Method di Class
+    </h1>
+
+    <ul>
+        <li>Membuat method di class sebenarnya bisa dilakukan dengan cara seperti menambahkan method di constructor function</li>
+
+        <li>Namun, hal tersebut sebenarnya menambahkan method ke dalam instance object</li>
+
+        <li>Khusus untuk method sebaiknya kita menambahkan ke prototype, bukan ke instance object</li>
+
+        <li>Untungnya di class, ada cara mudah menambahkan method dan secara ototmatis ditambahkan ke prototype</li>
+    </ul>
+
+    <h2>Kode : Method di Class</h2>
+    <pre>
+        class Person {
+            constructor(name){
+                this.name = name
+            }
+        }
+
+        //method di class
+        say(name){
+            console.info(`Hai ${name}`my name is ${this.name})
+        }
+
+        //instance object
+        const rama = new Person('Rama')
+        rama.say('Joko')
+        console.info(rama)
+
+        //output 
+        Hai Joko my name is Rama
+    </pre>
+
+    <script>
+        class Person{
+            constructor (name){
+                this.name = name
+                // this.say = function (name){
+                //     console.info(`Hai ${name} my name is ${this.name}`)
+                // }
+                // method say berada di instance object
+            }
+
+            // method di class
+            say(name){
+                console.info(`Hai ${name} my name is ${this.name}`)
+            }
+            // method say berada di prototype atau class personya (ini disarankan)
+        }
+
+        //instance object
+        const rama = new Person('Rama')
+        rama.say('Joko')
+
+        console.info(rama)
+    </script>
+</body>
+</html>
