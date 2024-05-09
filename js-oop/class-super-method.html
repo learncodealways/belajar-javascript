@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Super Method</title>
+</head>
+<body>
+    <h1>Super  Method</h1>
+    <ul>
+        <li>Selain digunakan untuk memanggil constructor milik parent class, kata kunci super juga bisa digunakan untuk mengakses method parent class</li>
+
+        <li>Caranya bisa menggunakan super titik nama functionnya</li>
+
+        <li>Dengan kata lain, super sebenarnya adalah reference ke parent prototype, mirip seperti __proto__</li>
+    </ul>
+
+    <h2>Kode : Super Method</h2>
+    <pre>
+        class Shape {
+            paint(){
+                console.log(`Paint Shape`)
+            }
+        }
+
+        class Circle extends Shape {
+            paint(){
+                super.paint()
+                console.log(`Paint Circle`)
+            }
+        }
+
+        const circle = new Circle ()
+        circle.paint()
+
+        OUTPUT
+        // Paint Shape
+        // Paint Circle
+    </pre>
+
+    <script>
+        class Shape {
+            paint(){
+                console.log(`Paint Shape`)
+            }
+
+           
+        }
+
+        class Circle extends Shape {
+           
+            paint(){
+                // super.paint()
+                console.log(`Paint Circle`)
+            }
+
+           
+        }
+
+        const circle = new Circle ('Rama')
+        circle.paint()
+    </script>
+</body>
+</html>
