@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Class Field</title>
+</head>
+<body>
+    <h1>Public Class Field</h1>
+    <ul>
+        <li>Public artinya bisa diakses dari luar class</li>
+
+        <li>Untuk membuat public class filed, kita bisa langsung buat nama field dengan value selevel dengan method</li>
+
+        <li>Jiika kita tidak memasukkan value ke dalam field tersebut, artinya filed tersebut memiliki value undefined</li>
+    </ul>
+
+    <h2>Kode : Public Class Field</h2>
+    <pre>
+        class Person{
+            firstName = 'Muhammad'
+            lastName = 'Ramadhan'
+            balance = 100
+
+            constructor (firstName, lastName, balance){
+                this.firstName = firstName
+                this.lastName = lastName
+                this.balance = balance
+            }
+        }
+
+        const rama = new Person()
+        console.log(rama)
+    </pre>
+
+    <script>
+         class Person{
+            firstName;
+            lastName;
+            balance = 100
+
+            constructor (firstName, lastName){
+                this.firstName = firstName
+                this.lastName = lastName
+                // this.balance = balance
+            }
+
+            sayPerson(){
+                console.log(`Hello ${this.firstName} ${this.lastName} your balance is a ${this.balance}`)
+            }
+        }
+
+        const rama = new Person('Muhammad', 'Ramadhan')
+       rama.sayPerson()
+    </script>
+</body>
+</html>
