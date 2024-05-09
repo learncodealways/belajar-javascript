@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class : Getter dan Setter</title>
+</head>
+<body>
+    <h1>Getter dan Setter di Class</h1>
+    <ul>
+        <li>Class juga mendukung pembuatan getter dan setter</li>
+
+        <li>Perlu diingat, getter dan setter ini akan berada di prototype, bukan di instace object</li>
+    </ul>
+
+    <h2>Kode : Getter dan Setter</h2>
+    <pre>
+        class Person{
+            constructor (firstName, lastName, userName){
+                this.firstName = firstName
+                this.lastName = lastName
+                this.userName = userName
+            }
+
+            get fullName(){
+                return `${this.firstName} ${this.lastName} dan nama panggilan saya adalah ${this.userName}`
+            }
+
+            set fullName(value){
+                const result = value.split(" ")
+                this.firstName = result[0]
+                this.lastName = result[1]
+                this.userName = result[2]
+            }
+        }
+
+        const person = new Person('Muhammad', 'Ramadhan', 'Rama')
+        console.log(person.fullName)
+    </pre>
+
+    <script>
+        class Person{
+            constructor (firstName, lastName, userName){
+                this.firstName = firstName
+                this.lastName = lastName
+                this.userName = userName
+            }
+
+            get fullName(){
+                return `Nama lengkap saya ${this.firstName} ${this.lastName} dan nama panggilan saya adalah ${this.userName}`
+            }
+
+            set fullName(value){
+                const result = value.split(" ")
+                this.firstName = result[0]
+                this.lastName = result[1]
+                this.userName = result[2]
+            }
+        }
+
+        const person = new Person('Muhammad', 'Ramadhan', 'Rama')
+        // console.log(person)
+       
+        //get fullname
+        console.log(person.fullName)
+
+        //set fullname
+        person.fullName = 'Budi Nugraha Budi'
+
+        //get fullname
+        console.log(person.fullName)
+    </script>
+</body>
+</html>
