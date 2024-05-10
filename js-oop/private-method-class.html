@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Method</title>
+</head>
+<body>
+    <h1>Private Method</h1>
+    <ul>
+        <li>Sama seperti field, terdapat proposal juga untuk menambah fitur private method di EcmaScript</li>
+
+        <li>Dengan demikian, access modifier private juga bisa digunakan di method</li>
+
+        <li>Caranya sama, dengan menambahkan tanda # diawal method, maka secara otomatis method tersebut adalah private</li>
+    </ul>
+
+    <h2>Kode : Private Method</h2>
+    <pre>
+        class Person{
+            say(name){
+                console.log(`Hello ${name}`)
+            }
+
+            //private method
+            #age(age){
+                console.log(`my age ${age}`)
+            }
+        }
+
+        const person = new Person()
+        person.say('Rama')
+
+        person.#age(20)
+    </pre>
+
+    <script>
+        class Person{
+            //public method
+            say(name){
+                console.log(`Hello ${name}`)
+            }
+            //public method
+            age(age){
+                console.log(`my age ${age}`)
+            }
+            //private method (Uncaught SyntaxError: Private field '#age' must be declared in an enclosing class)
+            #age(age){
+                console.log(`my age ${age}`)
+            }
+        }
+
+        const person = new Person()
+        person.say('Rama')
+        person.age(20)
+
+        // Uncaught SyntaxError: Private field '#age' must be declared in an enclosing class
+        // person.#age(20)
+    </script>
+</body>
+</html>
