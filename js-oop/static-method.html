@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+    <h1>Static Method</h1>
+    <ul>
+        <li>Kata kunci static juga tidak hanya bisa ditambahkan di dield, tapi juga di method</li>
+
+        <li>Jika kita tambahkan di method, artinya method tersebut jadi milik clasnnyam bukan prototype</li>
+
+        <li>Dan untuk mengakses method tersebut, kita juga bisa lakukan seperti static class field</li>
+    </ul>
+
+    <h2>Kode : Static Method</h2>
+    <pre>
+        class Penjumlahan{
+            static sum(...numbers){
+                let total = 0
+
+                for (const number of numbers){
+                    total += number
+                }
+                return total
+            }
+        }
+
+        const result = Penjumlahan.sum(2,2,2,2,2)
+        console.log(result)
+    </pre>
+
+    <script>
+         class Penjumlahan{
+            static sum(...numbers){
+                let total = 0
+
+                for (const number of numbers){
+                    total += number
+                }
+                return `jumlahnya adalah ${total}`
+            }
+        }
+
+        const result = Penjumlahan.sum(2,2,2,2,2)
+        console.log(result)
+    </script>
+</body>
+</html>
