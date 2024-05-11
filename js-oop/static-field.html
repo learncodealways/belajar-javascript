@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <h1>Kata Kunci static</h1>
+    <ul>
+        <li>static adalah kata kunci yang bisa kita tambahkan sebelum field atau method, biasanya ketika kita membuat field atau method, maka secara otomatis field akan menjadi property di instance object, dan method akan menjadi function di prototype</li>
+
+        <li>Jika kita tambahkan static, maka hal itu tidak terjadi</li>
+    </ul>
+
+    <h1>Static Class Field</h1>
+    <ul>
+        <li>Jika kita tambahkan static dalam class field, secara otomatis field tersebut bukan lagi milik instance object, melainkan milik class nya itu sendiri</li>
+
+        <li>Biasanya static digunakan jika kita ingin membuat utility field atau function</li>
+
+        <li>Cara mengakses static class field pun tidak lewat object, melainkan lewat class nya</li>
+
+        <li>Static class field bisa diartikan sifatnya global, tidak peduli diakses dimana atau siapa yang mengakses, hasilnya akan sama</li>
+    </ul>
+
+    <h2>Kode : Static Class Field</h2>
+    <pre>
+        class Person {
+            static name = 'Muhammad Ramadhan'
+            static version = 1.0
+            static author = 'Programmer Zaman Now'
+        }
+
+        //Cara akses
+        console.log(Person.name)
+        console.log(Person.version)
+        console.log(Person.author)
+
+        // Cara ubah
+
+        Person.name = 'Shinta Noor Azzahra'
+
+        console.log(Person.name)
+    </pre>
+
+    <script>
+        class Person {
+            static name = 'Muhammad Ramadhan'
+            static version = 1.2
+            static author = 'Programmer Zaman Now'
+        }
+
+        //Cara akses (tidak perlu me inisialiasasi instance object, karena memamggilnya langsung dengan classnya)
+        console.log(Person.name)
+        console.log(Person.version)
+        console.log(Person.author)
+
+        // Cara ubah
+
+        Person.name = 'Shinta Noor Azzahra'
+
+        console.log(Person.name)
+    </script>
+</body>
+</html>
