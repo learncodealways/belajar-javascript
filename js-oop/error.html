@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+    <h1>Error</h1>
+    <ul>
+        <li>Saat membuat aplikasi, sudah tentu kita tidak terhindar dari yang namanya error</li>
+
+        <li>di Javascript, Error merupakan sesuatu yang sudah standar</li>
+
+        <li>Banyak sekali class error di Javascript, namun semua class error di Javascript selalu berujung di class error, artinya class Error adalah super class untuk semua jenis error di Javascript</li>
+
+        <li>Contoh class error yang terdapat di Javascript contohnya SyntaxError, TypeError, EvalError dan lain-lain</li>
+    </ul>
+
+    <h1>Throw Error</h1>
+    <ul>
+        <li>Saat kita membuat instance object dari class Error, tidak lantas otomatis terjadi error</li>
+
+        <li>Kita perlu memberitahu program kita, bahwa kita akan mentrigger sebuah error, atau istilahkanya adalah melempat error (throw error)</li>
+
+        <li>Untuk melempar error, kita bisa gunakan kata kunci throw, diikuti dengan instance object error nya</li>
+
+        <li>Jika terjadi error, maka ototmatis kode program kita akan terhenti, dan kita melihat detail errornya di console di aplikasi browser kita</li>
+    </ul>
+
+    <h2>Kode : Throw Error</h2>
+    <pre>
+        class Penjumlahan{
+            static sum(...numbers){
+                if(numbers.length === 0){
+                    const result = new Error('Pastikan parameter lebih dari 0')
+                    throw result
+
+                    let total = 0
+                    for(number of numbers){
+                        number += total
+                    }
+                    return total
+                }
+            }
+        }
+
+        console.log(Penjumlahan.sum())
+    </pre>
+
+    <script>
+        class Penjumlahan{
+            static sum(...numbers){
+                if(numbers.length === 0){
+                    const result = new Error('Pastikan parameter lebih dari 0')
+                    throw result                 
+                }
+
+                let total = 0
+                    for(let number of numbers){
+                       total += number
+                    }
+                    return total
+            }
+        }
+
+        console.log(Penjumlahan.sum(1,1))
+        
+        /*
+            Uncaught Error: Pastikan parameter lebih dari 0
+        at Penjumlahan.sum (error.html:55:36)
+        at error.html:68:33
+        */
+        console.log(Penjumlahan.sum()) 
+    </script>
+</body>
+</html>
