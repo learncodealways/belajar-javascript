@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <h1>Error Handling</h1>
+    <ul>
+        <li>Saat terjadi error di kode program JavaScript, kadang kita tidak ingin program kita berhenti</li>
+        
+        <li>Di JavaScript, kita bisa menangkap jika terjadi error</li>
+
+        <li>Pada block try, kita akan mencoba mengakses kode program yang bisa menyebabkan error, dan jika terjadi error, block try akan berhenti dna otomatis masuk ke block cath</li>
+
+        <li>Jika tidak terjadi error, block catch tidak akan dieksekusi</li>
+    </ul>
+
+    <h1>Kata Kunci finally</h1>
+    <ul>
+        <li>Kadang kita ingin melakukan sesuatu entah itu terjadi error ataupun tidak</li>
+
+        <li>Dalam try catch, kita bisa menambahkan block finally</li>
+
+        <li>Block finally ini akan selalu dieksekusi setelah try catch selesai, entah terjadi error atau tidak, block finally akan selalu dieksekusi</li>
+    </ul>
+        
+    <h1>Tyr Finally</h1>
+    <ul>
+        <li>Kata kunci finally juga bisa digunakan tanpa perlu menggunakan catch</li>
+
+        <li>Biasanya ini digunakan dalam kasus tertentu</li>
+    </ul>
+
+    <script>
+        class Login{
+            login(name, password){
+                if(name == undefined|| password == undefined){
+                    const error = new Error('Anda Gagal Login')
+                    throw error
+                }else{
+                    console.log('Anda Berhasil Login')
+                }
+            }
+        }
+            const masuk = new Login()
+        try{
+            console.log(masuk.login())
+        }catch(error){
+            console.error(`${error.message}`)
+        }finally{
+            console.log('Proses Selesai')
+        }
+
+            
+
+        class Counter{
+            
+            constructor(){
+                this.counter = 1
+            }
+            
+            add(){
+                try{
+                    
+                    return this.counter
+                }finally{
+                    this.counter++
+                }
+                //artinya return tidak mengeksekusi kode setelahnay, jadi fungsi dari finally adalah selalu mengeksekusi kode
+            }
+          
+        }
+        
+       let counter = new Counter()
+       console.log(counter.add())
+       console.log(counter.add())
+       console.log(counter.add())
+       console.log(counter.add())
+    </script>
+</body>
+</html>
